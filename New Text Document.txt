@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include "file.h"
+
+void print(int arr[],int size);
+void scan(int arr[],int size);
+void search(int arr[],int size,int element);
+
+
+
+int main()
+{
+    int i,size,element;
+
+    int arr[5];
+
+    size=(sizeof(arr))/(sizeof(arr[0]));
+
+    printf("enter array elements\n");
+
+    scan(arr,size);
+    print(arr,size);
+    search(arr,size,element);
+
+
+
+    return 0;
+}
+
+    void print(int arr[],int size)
+    {
+        int i;
+        for(i=0;i<size;i++)
+        {
+                    printf("array[%d]=%d\n",i,arr[i]);
+
+        }
+    }
+
+    void scan(int arr[],int size)
+    {
+        int i;
+        for(i=0;i<size;i++)
+
+        {
+            scanf("%d",&arr[i]);
+        }
+    }
+
+    void search(int arr[],int size,int element)
+    {
+        int i;
+        printf("enter number to search for\n");
+        scanf("%d",&element);
+        for(i=0;i<size;i++)
+        {
+            if(element==arr[i])
+            {
+                 printf("the number you entered(%d) is element number (%d)\n",element,i);
+            }
+                             printf("*************%d************\n",i);
+
+
+
+        }
+        printf("\nnot found\n");
+
+    }
+
+
+
+
+
+
+
